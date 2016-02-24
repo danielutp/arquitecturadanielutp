@@ -31,7 +31,7 @@ Main
 4.
 
 a[4]= a[2]+x;
-y = y[40]+13;
+y[0]= y[40]+13;
 
 
 a?%L0
@@ -42,7 +42,8 @@ y?%L2
 0X0004	Add%L3,%L1,%L3
 0X0008	St %L3,%L0,16
 0X000C	Ld %L2,160,%L4
-0X0010	Add%L4,13,%L2
+0X0010	Add%L4,13,%L4
+0X0014  St %L4,%L2,0
 
 
 5. Convertir a lenguaje de maquina.
