@@ -1,0 +1,25 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity nPC is
+    Port ( PC_in : in  STD_LOGIC_VECTOR (31 downto 0);
+           RST : in  STD_LOGIC;
+           CLK : in  STD_LOGIC;
+           PC_out : out  STD_LOGIC_VECTOR (31 downto 0));
+end nPC;
+
+architecture ArqnPC of nPC is
+
+begin
+		process(PC_in,CLK,RST)
+			begin
+				if (RST='1') then
+					PC_out <= (others =>'0');
+				else
+						if (rising_edge(CLK))then
+						PC_OUT<=PC_in;
+						end if;
+				end if;
+		end process;
+end ArqnPC;

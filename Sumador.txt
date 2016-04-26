@@ -1,0 +1,22 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity Sumador is
+    Port ( OPE1 : in  STD_LOGIC_VECTOR (31 downto 0);
+           OPE2 : in  STD_LOGIC_VECTOR (31 downto 0);
+           RESULT : out  STD_LOGIC_VECTOR (31 downto 0));
+end Sumador;
+
+architecture ArqSumador of Sumador is
+
+--constant OPE2 : std_logic_vector (31 downto 0) := "00000000000000000000000000000001";
+
+begin
+
+		process(OPE1,OPE2)
+		begin
+			RESULT <= (OPE1 + OPE2);
+		end process;
+
+end ArqSumador;
